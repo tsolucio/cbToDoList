@@ -1,0 +1,25 @@
+<?xml version='1.0'?>
+<schema>
+	<tables>
+		<table>
+			<name>vtiger_cbtodolist</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_cbtodolist` (
+  `cbtodolistid` int(11) NOT NULL,
+  `todo` varchar(200) default NULL,
+  `cbtodolistno` varchar(100) NOT NULL,
+  `todotype` varchar(120) default 'WorkList',
+  `url` varchar(220) default NULL,
+  `tododone` char(100) default NULL,
+  `collection` varchar(150) default NULL,
+  PRIMARY KEY (`cbtodolistid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+		<table>
+			<name>vtiger_cbtodolistcf</name>
+			<sql><![CDATA[CREATE TABLE `vtiger_cbtodolistcf` (
+  `cbtodolistid` int(11) NOT NULL,
+  PRIMARY KEY (`cbtodolistid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
+		</table>
+	</tables>
+</schema>
